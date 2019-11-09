@@ -5,7 +5,7 @@ Resource            ../pageobjects/objects.robot
 Resource            ../functions/keywords.robot
 Library             Selenium2Library
 Suite Setup         Set Keyword Timeout    120s
-Suite Teardown      Close All Browsers
+Test Teardown       Close All Browsers
 
 
 *** Test Cases ***
@@ -16,16 +16,12 @@ Suite Teardown      Close All Browsers
      Then I should see text Data de retorno
         And I take sceenshot
     
-    [Teardown]  Close All Browsers
-
 2) Scenario: Checar comportamento apos clicar no botão "somente ida ou volta"
     [Tags]   scenario2
     Given I navigate to https://www.voeazul.com.br/home
     When I click on ${SOMENTE_IDA_OU_VOLTA} button
     Then I should NOT see text Data de retorno
       And I take sceenshot
-
-    [Teardown]  Close All Browsers
 
 3) Scenario: Checar comportamento apos clicar no botão "somente ida ou volta"
     [Tags]   scenario3
@@ -34,8 +30,6 @@ Suite Teardown      Close All Browsers
     Then I should see text Primeiro Trecho
       And I should see text Segundo Trecho
       And I take sceenshot
-
-    [Teardown]  Close All Browsers
 
 4) Scenario: Buscar passagem ida e volta para 2 adultos, exibir valor em Reais e mostrar datas flexíveis
         [Tags]   scenario7
@@ -51,8 +45,6 @@ Suite Teardown      Close All Browsers
           And I click on ${BUSCAR_PASSAGENS} button
         Then I should see text Selecione seu voo
           And I take sceenshot
-
-        [Teardown]  Close All Browsers
 
 5) Scenario: Buscar passagem somente ida ou volta para um adulto e uma criança, buscar o valor por pontos e reais
         [Tags]   scenario8
@@ -72,8 +64,6 @@ Suite Teardown      Close All Browsers
         Then I should see text Selecione seu voo
           And I take sceenshot
         
-        [Teardown]  Close All Browsers
-
 6) Scenario: Buscar passagem multitrechos para dois adultos, duas crianças e um bebe, buscar valor por pontos.
         [Tags]  scenario9
         Given I navigate to https://www.voeazul.com.br/home
@@ -93,8 +83,6 @@ Suite Teardown      Close All Browsers
         Then I should see text Selecione seu voo
           And I take sceenshot
 
-        [Teardown]  Close All Browsers
-
 7) Scenario: Buscar passagem de ida e volta sem inserir destino
         [Tags]  scenario10
         Given I navigate to https://www.voeazul.com.br/home
@@ -109,8 +97,6 @@ Suite Teardown      Close All Browsers
         Then I should see text Campo 'Chegando em:' é obrigatório!
           And I take sceenshot
 
-        [Teardown]  Close All Browsers
-
 8) Scenario: Buscar passagem de ida e volta sem inserir origem
         [Tags]  scenario11
         Given I navigate to https://www.voeazul.com.br/home
@@ -124,8 +110,6 @@ Suite Teardown      Close All Browsers
         Then I should see text Campo 'Saindo de:' é obrigatório!
           And I take sceenshot
         
-        [Teardown]  Close All Browsers
-
 9) Scenario: Buscar passagem de ida e volta para 0 adulto e uma criança
         [Tags]  scenario12
         Given I navigate to https://www.voeazul.com.br/home
@@ -140,8 +124,6 @@ Suite Teardown      Close All Browsers
         Then I should see text É necessário que pelo menos um adulto acompanhe cada criança na viagem.
           And I take sceenshot
 
-        [Teardown]  Close All Browsers
-
 10) Scenario: Buscar passagem de ida e volta sem inserir data de retorno
         [Tags]  scenario13
         Given I navigate to https://www.voeazul.com.br/home
@@ -154,8 +136,6 @@ Suite Teardown      Close All Browsers
           And I click on ${BUSCAR_PASSAGENS} button
         Then I should see text Campo 'Data de retorno:' é obrigatório!
           And I take sceenshot
-
-        [Teardown]  Close All Browsers
 
 11) Scenario: Buscar passagem de ida e volta para 0 adulto e 0 criança
         [Tags]  scenario14
