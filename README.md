@@ -11,7 +11,7 @@
    2. Extraia os arquivos zip;
    3. Acesse a pasta do projeto e copie o endereço da pasta webdrivers.
    4. Configure o PATH acessando o painel de controle > Sistema > Configurações avançadas > Avançado > Variáveis de ambiente.
-   5. Em viriáveis do sistema, de um duplo clique em PATH, e cole o endereço da pasta webdrivers.
+   5. Em variáveis do sistema, de um duplo clique em PATH, e cole o endereço da pasta webdrivers.
 
 ## Execução da Automação:
     1. Abra novamente o terminal e navegue até o diretório ..\desafio\desafio-test-scenario\testsuite
